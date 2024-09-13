@@ -29,8 +29,8 @@ const calorieSchema = new mongoose.Schema({
 });
 
 // Create a model from the schema
-const Calorie = mongoose.model('Calorie', calorieSchema);
+const dbCalorie = mongoose.model('Calorie', calorieSchema);
 
 // Export the model to use it in other parts of the application
-module.exports = Calorie;
+module.exports = dbCalorie;
 

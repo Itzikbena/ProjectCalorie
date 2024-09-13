@@ -10,7 +10,7 @@
  */
 
 // Import the Calorie model to interact with the calorie collection in MongoDB
-const Calorie = require('../models/calories');
+const calorie = require('../models/calories');
 // Import the express module
 const express = require('express');
 // Create a new router object to handle routes
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
     } = req.body;
 
     // Create a new Calorie document instance with the extracted values
-    const newCalorie = new Calorie ({
+    const newCalorie = new calorie ({
       user_id,
       year,
       month,

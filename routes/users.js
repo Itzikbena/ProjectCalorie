@@ -12,14 +12,14 @@
 
 var express = require('express');
 var router = express.Router();
-const User = require("../models/user"); // Assuming you have a User model
+const getUser = require("../models/user"); // Assuming you have a User model
 
 router.get('/:id', async function(req, res, next) {
   try {
     const userId = req.params.id;
 
     // Find user by `id` field (assuming this is a string or number, not the MongoDB _id)
-    const user = await User.findOne({ id: userId });
+    const user = await getUser.findOne({ id: userId });
 
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
