@@ -13,7 +13,7 @@
 const express = require('express');
 const router = express.Router();
 const { MongoClient } = require('mongodb'); // Not used in the provided snippet
-const Calorie = require('../models/calories'); // Model for accessing calorie data
+const calorie = require('../models/calories'); // Model for accessing calorie data
 
 // Define a route to handle GET requests
 router.get('/', async (req, res) => {
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 
     try {
         // Find calorie entries matching the criteria
-        const report = await Calorie.find({year, month, user_id}).select('day description amount category');
+        const report = await calorie.find({year, month, user_id}).select('day description amount category');
         // Iterate over each entry and categorize
         report.forEach(calorie => {
             const entry = { // Construct an entry object
