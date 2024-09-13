@@ -14,7 +14,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Import route handlers
-const addcalories = require('./routes/addcalories');
+const addcalories = require('./routes/addCalories');
 const about = require('./routes/about');
 const report = require('./routes/report');
 const index = require('./routes/index');

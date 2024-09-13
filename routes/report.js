@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
 
     try {
         // Find calorie entries matching the criteria
-        const report = await Calorie.find({year, month, user_id}).select("day description amount category");
+        const report = await Calorie.find({year, month, user_id}).select('day description amount category');
         // Iterate over each entry and categorize
         report.forEach(calorie => {
             const entry = { // Construct an entry object
