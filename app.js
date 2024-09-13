@@ -52,7 +52,7 @@ mongoose.connect(uri)
   });
   
   // Define routes with their base paths
-  app.use('/addcalories', addCalories); // Route for adding calories
+  app.use('/addCalories', addCalories); // Route for adding calories
   app.use('/about', about); // Route for about information
   app.use('/report', report); // Route for generating reports
   app.use('/', index); // Route for the index page
