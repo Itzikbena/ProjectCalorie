@@ -14,7 +14,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 // Import route handlers
-const addcalories = require('./routes/addCalories');
+const addCalories = require('./routes/addCalories');
 const about = require('./routes/about');
 const report = require('./routes/report');
 const index = require('./routes/index');
@@ -52,7 +52,7 @@ mongoose.connect(uri)
   });
   
   // Define routes with their base paths
-  app.use('/addcalories', addcalories); // Route for adding calories
+  app.use('/addcalories', addCalories); // Route for adding calories
   app.use('/about', about); // Route for about information
   app.use('/report', report); // Route for generating reports
   app.use('/', index); // Route for the index page
